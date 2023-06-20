@@ -67,7 +67,7 @@ main.contact-landing .container .img-box img {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 35px;
   flex-wrap: wrap;
 }
 
@@ -78,13 +78,18 @@ main.contact-landing .container .img-box img {
   text-align: center;
   width: 375px;
   background-color: var(--light1-gray);
-  box-shadow: 3px 3px 5px 1px rgb(0 0 0 / 10%);
+  border-bottom: 3px solid var(--light2-gray);
   border-radius: 5px;
   padding: 30px;
-  opacity: 0;
+  cursor: pointer;
   /* Edited in JS */
+  opacity: 0;
   transform: translateY(35px);
-  transition: 1s;
+  transition: 0.75s;
+}
+
+.cards .container .card:hover {
+  background-color: var(--light2-gray);
 }
 
 .cards .container .card i {
@@ -96,14 +101,21 @@ main.contact-landing .container .img-box img {
 }
 
 .cards .container .card h3 {
+  line-height: 1.45;
   margin: 20px 0 15px;
   text-transform: capitalize;
 }
 
 .cards .container .card p {
-  line-height: 1.25;
-  font-size: 0.85em;
+  line-height: 1.45;
+  font-size: 0.8em;
   color: var(--light3-gray);
+}
+
+@media (max-width: 480px) {
+  .cards .container .card h3 {
+    font-size: 0.9em;
+  }
 }
 
 /* =========================== Contact =========================== */
@@ -137,6 +149,8 @@ section.contact .container form input[type='text'] {
   border: none;
   outline: none;
   font-weight: bold;
+  border-bottom: 1px solid var(--light2-gray);
+  border-radius: 5px;
 }
 
 section.contact .container form textarea {
@@ -147,13 +161,22 @@ section.contact .container form textarea {
   min-height: 30vh;
   resize: none;
   font-weight: bold;
+  border-bottom: 1px solid var(--light2-gray);
+  border-radius: 5px;
 }
 
-section.contact .container form input[type='submit'] {
+section.contact .container form input.submit {
   background-color: var(--main-color);
+  text-align: center;
   color: white;
   padding: 10px;
   border: none;
   outline: none;
   cursor: pointer;
+  border-radius: 5px;
+  transition: 0.25s;
+}
+
+section.contact .container form input.submit:hover {
+  opacity: 0.85;
 }
