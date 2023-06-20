@@ -32,6 +32,7 @@
 
 .login .container .box form span a {
   color: var(--main-color);
+  cursor: pointer;
 }
 
 .login .container .box form input {
@@ -54,10 +55,12 @@
 .login .container .box form>a {
   color: var(--main-color);
   font-weight: bold;
+  cursor: pointer;
 }
 
-.login .container .box form input[type="submit"] {
+.login .container .box form input.submit {
   background-color: var(--main-color);
+  text-align: center;
   color: white;
   cursor: pointer;
   margin-top: 15px;
