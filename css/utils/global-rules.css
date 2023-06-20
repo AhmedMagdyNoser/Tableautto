@@ -1,0 +1,103 @@
+/* =========================== Global Rules =========================== */
+:root {
+  --main-color: #832500;
+  --second-color: #ffc3acce;
+  --light1-gray: #f4f4f4;
+  --light2-gray: #e1e1e1;
+  --light3-gray: #858585;
+  --dark-gray: #454545;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Sofia Sans', sans-serif;
+  line-height: 1;
+  padding: 0;
+  margin: 0;
+}
+
+*::selection {
+  background-color: var(--main-color);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  display: inline-block;
+  /* instead of inline */
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+/* =========================== Scrollbar =========================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--light1-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--main-color);
+}
+
+
+
+/* =========================== Container =========================== */
+.container {
+  width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+
+
+/* =========================== Main Heading =========================== */
+h2.main-heading {
+  text-transform: capitalize;
+}
+
+p.main-heading {
+  margin: 10px 0 15px;
+  font-size: 0.9em;
+  color: var(--light3-gray);
+  line-height: 1.25;
+}
+
+@media (max-width: 768px) {
+  h2.main-heading {
+    font-size: 1.2em;
+  }
+
+  p.main-heading {
+    font-size: 0.75em;
+  }
+}

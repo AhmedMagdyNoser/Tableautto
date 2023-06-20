@@ -1,0 +1,113 @@
+/* =========================== Header =========================== */
+header {
+  background-color: var(--light1-gray);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: 250ms top;
+}
+
+header .container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container .logo {
+  color: var(--main-color);
+  font-size: 1.8em;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+header .container nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header .container nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header .container nav ul li a {
+  color: var(--dark-gray);
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+header .container nav ul li a:hover {
+  background-color: var(--light2-gray);
+}
+
+header .container nav .login {
+  color: white;
+  background-color: var(--main-color);
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+/* Opened */
+header .container #toggle-menu {
+  padding: 7.5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 250ms;
+  display: none;
+}
+
+header .container #toggle-menu:hover {
+  background-color: var(--light2-gray);
+}
+
+@media (max-width: 768px) {
+  header .container #toggle-menu {
+    display: block;
+  }
+
+  header .container nav {
+    display: none;
+  }
+}
+
+header .container nav.opened {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0;
+  background-color: var(--light1-gray);
+  border-bottom: 3px solid var(--main-color);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transition: 350ms;
+}
+
+header .container nav.opened ul {
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+}
+
+header .container nav.opened ul li {
+  border-bottom: 1px solid var(--light2-gray);
+  width: 100%;
+}
+
+header .container nav.opened ul li a {
+  padding: 15px;
+  border-radius: 0;
+  width: 100%;
+}
+
+header .container nav.opened .login {
+  margin: 15px;
+  width: calc(100% - 30px);
+  text-align: center;
+}

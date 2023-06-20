@@ -1,0 +1,94 @@
+/* =========================== Login Page =========================== */
+/* =========================== Login Box =========================== */
+.login .container .box {
+  display: flex;
+  background-color: var(--light1-gray);
+  margin: 50px 0;
+}
+
+.login .container .box .img {
+  background-image: url(../../imgs/decoration/decore3.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .container .box form {
+  width: 50%;
+  padding: 150px 100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login .container .box form span {
+  color: var(--light3-gray);
+  font-weight: 600;
+  margin: 15px 0;
+}
+
+.login .container .box form span a {
+  color: var(--main-color);
+}
+
+.login .container .box form input {
+  outline: none;
+  border: 1px solid var(--light2-gray);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  caret-color: var(--main-color);
+  color: var(--main-color);
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.login .container .box form input::placeholder {
+  color: var(--light3-gray);
+  font-weight: normal;
+}
+
+.login .container .box form>a {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+.login .container .box form input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+@media (max-width: 1024px) {
+  .login {
+    background-color: var(--light1-gray);
+  }
+
+  .login .container .box .img {
+    display: none;
+  }
+
+  .login .container .box form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .login .container .box {
+    margin: 0;
+  }
+
+  .login .container .box form {
+    padding: 150px 10px;
+    align-items: center;
+  }
+
+  .login .container .box form input {
+    width: 100%;
+  }
+}

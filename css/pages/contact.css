@@ -1,0 +1,159 @@
+/* =========================== Contact Us Page =========================== */
+/* =========================== Landing =========================== */
+main.contact-landing {
+  background-color: var(--light1-gray);
+}
+
+main.contact-landing .container {
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0;
+  /* Edited in JS */
+  transform: translateY(35px);
+  transition: 1s;
+}
+
+main.contact-landing .container h2 {
+  font-weight: 100;
+  font-size: 4em;
+  text-transform: capitalize;
+  line-height: 1.25;
+}
+
+main.contact-landing .container .img-box img {
+  width: 350px;
+}
+
+@media (max-width: 1024px) {
+  main.contact-landing .container h2 {
+    font-size: 3em;
+  }
+
+  main.contact-landing .container .img-box img {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  main.contact-landing .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  main.contact-landing .container h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  main.contact-landing .container h2 {
+    font-size: 2em;
+  }
+
+  main.contact-landing .container .img-box img {
+    width: 275px;
+  }
+}
+
+/* =========================== Cards =========================== */
+.cards {
+  padding: 75px 0;
+  position: relative;
+}
+
+.cards .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.cards .container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 375px;
+  background-color: var(--light1-gray);
+  box-shadow: 3px 3px 5px 1px rgb(0 0 0 / 10%);
+  border-radius: 5px;
+  padding: 30px;
+  opacity: 0;
+  /* Edited in JS */
+  transform: translateY(35px);
+  transition: 1s;
+}
+
+.cards .container .card i {
+  color: var(--light1-gray);
+  font-size: 1.5em;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.cards .container .card h3 {
+  margin: 20px 0 15px;
+  text-transform: capitalize;
+}
+
+.cards .container .card p {
+  line-height: 1.25;
+  font-size: 0.85em;
+  color: var(--light3-gray);
+}
+
+/* =========================== Contact =========================== */
+section.contact {
+  padding: 50px 0;
+  background-color: var(--light1-gray);
+}
+
+section.contact h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section.contact .container form {
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  caret-color: var(--main-color);
+}
+
+@media (max-width: 480px) {
+  section.contact .container form {
+    padding: 25px 0
+  }
+}
+
+section.contact .container form input[type='text'] {
+  color: var(--main-color);
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+}
+
+section.contact .container form textarea {
+  color: var(--main-color);
+  padding: 10px;
+  border: none;
+  outline: none;
+  min-height: 30vh;
+  resize: none;
+  font-weight: bold;
+}
+
+section.contact .container form input[type='submit'] {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}

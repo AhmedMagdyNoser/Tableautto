@@ -1,0 +1,411 @@
+/* =========================== The Home Page =========================== */
+/* =========================== Landing =========================== */
+.home-landing {
+  width: 100%;
+  background-image: url(../../imgs/landing1.jpg);
+  background-size: cover;
+  position: relative;
+  transition: 1500ms;
+  aspect-ratio: 2 / 1;
+}
+
+.home-landing .overlay {
+  background-color: #15050075;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home-landing .container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home-landing .container h1 {
+  line-height: 1.45;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: white;
+  z-index: 1;
+}
+
+.home-landing .container h1 strong {
+  font-size: 3em;
+}
+
+.home-landing .container a {
+  color: white;
+  background-color: var(--main-color);
+  margin-top: 15px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: 150ms;
+  z-index: 1;
+}
+
+.home-landing .container a:hover {
+  background-color: white;
+  color: var(--main-color);
+}
+
+@media (max-width: 1024px) {
+  .home-landing .container h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-landing .container {
+    align-items: center;
+  }
+
+  .home-landing .container h1 {
+    text-align: center;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-landing .container h1 {
+    font-size: 0.7em;
+  }
+
+  .home-landing .container a {
+    margin-top: 5px;
+    padding: 5px 10px;
+    font-size: 0.65em;
+  }
+}
+
+/* =========================== Uploading =========================== */
+/* =========================== Uploading =========================== */
+/* =========================== Uploading =========================== */
+
+/* =========================== Support Info =========================== */
+.support-info {
+  padding: 50px 0;
+}
+
+.support-info .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 20px;
+}
+
+.support-info .container .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.support-info .container .box h3 {
+  margin: 15px 0 10px;
+}
+
+.support-info .container .box i {
+  color: var(--main-color);
+  font-size: 2em;
+}
+
+.support-info .container .box p {
+  color: var(--light3-gray);
+  line-height: 1.35;
+  font-size: 0.9em;
+}
+
+/* =========================== Art =========================== */
+/* =========================== Art =========================== */
+/* =========================== Art =========================== */
+
+/* =========================== Decoration =========================== */
+/* =========================== Decoration =========================== */
+/* =========================== Decoration =========================== */
+
+/* =========================== About Us =========================== */
+.about-us {
+  padding: 50px 0;
+  background-color: var(--light1-gray);
+}
+
+.about-us .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-us .container .text-box h2 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+.about-us .container .text-box p {
+  line-height: 1.5;
+  color: var(--dark-gray);
+  text-align: justify;
+}
+
+.about-us .container .img-box img {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .about-us .container .img-box {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us .container .text-box {
+    padding: 0 10px;
+    font-size: smaller;
+    text-align: center;
+  }
+}
+
+/* =========================== Best-Selling =========================== */
+.best-selling {
+  padding: 50px 0;
+}
+
+.best-selling .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.best-selling .container .text-box {
+  min-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.best-selling .container .text-box h2 {
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+@media (max-width: 768px) {
+  .best-selling .container .text-box {
+    font-size: smaller;
+  }
+
+  .best-selling .container .text-box h2 {
+    text-align: center;
+  }
+}
+
+.best-selling .container .text-box .service {
+  margin-top: 20px;
+}
+
+.best-selling .container .text-box .service .service-name {
+  font-weight: bold;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.best-selling .container .text-box .service .service-name span {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: smaller;
+}
+
+.best-selling .container .text-box .service .progress-bar {
+  background-color: var(--light1-gray);
+  height: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.best-selling .container .text-box .service .progress-bar .progress-value {
+  width: 0%;
+  /* Edited in JS */
+  height: 100%;
+  background-color: var(--main-color);
+  transition: 1s;
+}
+
+.best-selling .container .img-box img {
+  padding: 25px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.5s;
+}
+
+@media (max-width: 768px) {
+  .best-selling .container .text-box {
+    width: 100%;
+  }
+
+  .best-selling .container .img-box {
+    display: none;
+  }
+
+  .best-selling .container .img-box img {
+    display: none;
+  }
+}
+
+/* =========================== Timeline =========================== */
+.timeline {
+  background-color: var(--light1-gray);
+  padding: 30px 0 50px;
+}
+
+.timeline .container {
+  position: relative;
+}
+
+.timeline .container .center-line {
+  background-color: var(--main-color);
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  left: calc(50% - 2px);
+}
+
+.timeline .container .center-line::after {
+  content: '';
+  background-color: var(--main-color);
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -3px;
+  top: calc(100% - 5px);
+}
+
+.timeline .container .year {
+  background-color: var(--main-color);
+  position: relative;
+  color: white;
+  font-size: 0.8em;
+  padding: 5px 7px;
+  border-radius: 5px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.timeline .container .content {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  position: relative;
+  width: calc(50% - 25px);
+  /* Edited in JS :- */
+  opacity: 0;
+  transform: translateY(35px);
+  transition: 1s;
+}
+
+.timeline .container .content.right {
+  left: calc(50% + 25px);
+}
+
+/* after => circle ... before => arrow */
+.timeline .container .content.right::after,
+.timeline .container .content.left::after {
+  content: '';
+  background-color: var(--light1-gray);
+  border: 3px solid var(--main-color);
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  left: -31px;
+  top: 20px;
+}
+
+.timeline .container .content.left::after {
+  left: unset;
+  right: -31px;
+}
+
+.timeline .container .content.right::before,
+.timeline .container .content.left::before {
+  content: '';
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+  position: absolute;
+  left: -24px;
+  top: 15px;
+}
+
+.timeline .container .content.left::before {
+  left: unset;
+  right: -24px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline .container .content h3 {
+  color: var(--main-color);
+  margin-bottom: 9px;
+}
+
+.timeline .container .content p {
+  color: var(--light3-gray);
+  font-size: 0.85em;
+  line-height: 1.25;
+}
+
+@media (max-width: 768px) {
+  .timeline .container .content {
+    font-size: smaller;
+  }
+
+  .timeline .container .content h3 {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* to make them all in the right side */
+  .timeline .container .content.left::after {
+    left: -31px;
+  }
+
+  .timeline .container .content.left::before {
+    right: unset;
+    left: -24px;
+    border-color: transparent white transparent transparent;
+  }
+
+  .timeline .container .center-line {
+    left: 15px;
+  }
+
+  .timeline .container .year {
+    margin: unset;
+    margin-top: 20px;
+    left: 0;
+  }
+
+  .timeline .container .content.right,
+  .timeline .container .content.left {
+    width: calc(100% - 30px);
+    right: unset;
+    left: 27px;
+  }
+}

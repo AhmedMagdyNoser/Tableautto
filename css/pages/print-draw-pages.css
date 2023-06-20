@@ -1,0 +1,399 @@
+/* =========================== Both Print & Draw Pages =========================== */
+/* =========================== Uploading =========================== */
+.uploading {
+  padding: 50px 0;
+}
+
+.uploading .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+
+.uploading .container .back-images {
+  z-index: -1;
+  opacity: 0.12;
+}
+
+.uploading .container .back-images img {
+  position: absolute;
+  width: 175px;
+  top: 25px;
+  animation: floating 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floating {
+  from {
+    top: 25px;
+  }
+
+  to {
+    top: 40px;
+  }
+}
+
+.uploading .container .back-images img[alt="Camera"] {
+  left: 75%;
+  rotate: 25deg;
+}
+
+.uploading .container .back-images img[alt="Frame"] {
+  right: 75%;
+  rotate: 335deg;
+}
+
+@media (max-width: 1024px) {
+  .uploading .container .back-images {
+    display: none;
+  }
+}
+
+.uploading .container form {
+  padding: 35px;
+  width: 300px;
+  max-width: 300px;
+  margin-bottom: 15px;
+  border: 2px dashed var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.uploading .container form:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.uploading .container form :where(i, p) {
+  color: var(--main-color);
+}
+
+.uploading .container form i {
+  font-size: 2.5em;
+}
+
+.uploading .container form p {
+  text-transform: capitalize;
+}
+
+.uploading .container .prompt {
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: none;
+}
+
+.uploading .container .extention-prompt {
+  background-color: var(--second-color);
+  text-transform: uppercase;
+  border: none;
+}
+
+.uploading .container .replacement-prompt p {
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+.uploading .container .replacement-prompt .options button {
+  padding: 5px 15px;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.uploading .container .replacement-prompt .options button:hover {
+  opacity: 0.85;
+}
+
+.uploading .container .row {
+  background-color: var(--second-color);
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 300px;
+  max-width: 300px;
+}
+
+.uploading .container .row i {
+  font-size: 2em;
+  color: var(--main-color);
+}
+
+.uploading .container .quality-note .row {
+  padding: 10px 15px;
+  border: 1px solid var(--main-color);
+  background-color: transparent;
+}
+
+.uploading .container .quality-note i {
+  font-size: 1.65em;
+}
+
+.uploading .container .quality-note p {
+  line-height: 1.4;
+  font-size: 0.75em;
+  text-align: left;
+  color: var(--dark-gray);
+}
+
+.uploading .container .row .content {
+  font-size: 0.85em;
+  flex: 1;
+}
+
+.uploading .container .row .content .details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8.5px;
+}
+
+.uploading .container .row .content .name {
+  font-weight: 600;
+}
+
+.uploading .container .row .content .progress-bar {
+  width: 100%;
+  height: 7.5px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.uploading .container .row .content .progress-bar .progress {
+  background-color: var(--main-color);
+  height: 100%;
+  width: 0%;
+  border-radius: 5px;
+  transition: 2.5s width;
+}
+
+.uploading .container .uploaded-area .row .content .name {
+  text-align: left;
+  margin-bottom: 7.5px;
+}
+
+.uploading .container .uploaded-area .row .content .size {
+  text-align: left;
+  font-size: 0.85em;
+}
+
+.uploading .container .uploaded-area .row .uploaded-check {
+  font-size: 1em;
+}
+
+.uploading .container .continue-button {
+  display: none;
+}
+
+.uploading .container .continue-button a {
+  color: white;
+  background-color: var(--main-color);
+  font-size: 0.85em;
+  margin-top: 5px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  animation: paddingChanging 0.75s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes paddingChanging {
+  form {
+    padding: 10px 15px
+  }
+
+  to {
+    padding: 10px 25px;
+  }
+}
+
+/* =========================== Example Photo =========================== */
+.example-photo {
+  position: relative;
+}
+
+.example-photo .image.print {
+  background-image: url(../../imgs/print-example.jpg);
+}
+
+.example-photo .image.draw {
+  background-image: url(../../imgs/draw-example.jpg);
+}
+
+.example-photo .image {
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 1024px) {
+  .example-photo .image {
+    height: 45vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .example-photo .image {
+    height: 30vh;
+  }
+}
+
+.example-photo .overlay {
+  background-color: #15050075;
+  opacity: 50%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* =========================== Size Selection =========================== */
+.size-selection {
+  padding: 50px 0;
+}
+
+.size-selection .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.size-selection .container .sizes {
+  padding: 25px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  column-gap: 50px;
+  row-gap: 75px;
+}
+
+.size-selection .container .sizes .box {
+  opacity: 0.6;
+  transition: 0.25s opacity;
+  cursor: pointer;
+}
+
+.size-selection .container .sizes .box:hover {
+  opacity: 1;
+}
+
+.size-selection .container .sizes .box.size-selected {
+  /* the size-selected class is added in JS */
+  opacity: 1;
+}
+
+.size-selection .container .sizes .box .tableau {
+  background-color: white;
+  border: 3px solid var(--main-color);
+  border-radius: 5px;
+  box-shadow: -3px 3px 3px 0px #0005;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.size-selection .container .sizes .box .s50x70 {
+  width: calc(50px * 3);
+  height: calc(70px * 3);
+}
+
+.size-selection .container .sizes .box .s40x50 {
+  width: calc(40px * 3);
+  height: calc(50px * 3);
+}
+
+.size-selection .container .sizes .box .s30x40 {
+  width: calc(30px * 3);
+  height: calc(40px * 3);
+}
+
+.size-selection .container .sizes .box .s20x30 {
+  width: calc(20px * 3);
+  height: calc(30px * 3);
+}
+
+.size-selection .container .sizes .box .s25x25 {
+  width: calc(25px * 3);
+  height: calc(25px * 3);
+}
+
+.size-selection .container .sizes .box .tableau i {
+  color: var(--main-color);
+  font-size: 1.5em;
+}
+
+.size-selection .container .sizes .box .tableau .price {
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  background-color: var(--main-color);
+  color: white;
+  padding: 6.5px 8.5px;
+  border-radius: 5px;
+}
+
+.size-selection .container .sizes .box span {
+  font-weight: bold;
+  font-size: smaller;
+  color: var(--dark-gray);
+  margin-top: 10px;
+  display: block;
+}
+
+/* =========================== Order Now =========================== */
+.order-now {
+  padding: 50px 0;
+  background-color: var(--light1-gray);
+  text-align: center;
+}
+
+.order-now .container p {
+  padding: 0 25px;
+  line-height: 1.5;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .order-now .container p {
+    font-size: 0.82em;
+  }
+}
+
+.order-now .container button {
+  width: 65%;
+  padding: 15px 0;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 18px;
+  margin-top: 15px;
+  transition: 250ms;
+}
+
+.order-now .container button:hover {
+  opacity: 0.9;
+}
+
+.order-now .container button[disabled] {
+  opacity: 0.25;
+  cursor: default;
+}
