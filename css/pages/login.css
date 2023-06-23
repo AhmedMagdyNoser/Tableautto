@@ -4,10 +4,12 @@
   display: flex;
   background-color: var(--light1-gray);
   margin: 50px 0;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .login .container .box .img {
-  background-image: url(../../imgs/decoration/decore3.jpg);
+  background-image: url(../../imgs/decoration/decore1.jpg);
   background-size: cover;
   background-position: center;
   width: 50%;
@@ -64,6 +66,11 @@
   color: white;
   cursor: pointer;
   margin-top: 15px;
+  transition: 0.25s;
+}
+
+.login .container .box form input.submit:hover {
+  opacity: 0.9;
 }
 
 @media (max-width: 1024px) {
