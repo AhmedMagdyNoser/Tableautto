@@ -1,14 +1,15 @@
 /* =========================== Footer =========================== */
 footer {
   padding: 50px 0;
-  background-color: var(--main-color);
+  margin-top: 25px;
+  background-color: var(--light1-gray);
 }
 
 footer .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 50px;
-  color: white;
+  color: var(--dark-gray);
 }
 
 footer .container .box {
