@@ -146,7 +146,9 @@
 /* =========================== Decoration Landing =========================== */
 .decoration-landing {
   aspect-ratio: 3 / 1;
-  background-image: url(../imgs/decoration/landing1.jpg);
+  
+  background-image: url(../../imgs/decoration/landing1.jpg);
+  background-size: cover;
 }
 
 .decoration-landing .overlay {
@@ -215,7 +217,7 @@
 }
 
 .products .container .card:hover .overlay {
-  opacity: 0.40;
+  opacity: 0.35;
 }
 
 .products .container .card img {
@@ -261,10 +263,21 @@
 
 .products.decoration .container .card h3 {
   line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to display */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .products.decoration .container .card p {
-  color: var(--light3-gray);
-  line-height: 1.35;
+  opacity: 0.75;
+  line-height: 1.45;
+  margin-bottom: 5px;
   font-size: 0.75em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to display */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
