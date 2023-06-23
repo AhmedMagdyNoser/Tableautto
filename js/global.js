@@ -1,3 +1,8 @@
+// Prevent the context menu
+document.addEventListener("contextmenu", e => {
+    e.preventDefault();
+})
+
 // Header
 let toggleButton = document.getElementById("toggle-menu");
 toggleButton.onclick = () => {
