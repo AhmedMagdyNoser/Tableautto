@@ -59,7 +59,7 @@ fileInput.onchange = event => {
 function uploadFile(fileName, fileSize) {
   qualityNote.innerHTML = `<div class="row">
                               <i class="fa-solid fa-circle-exclamation"></i>
-                              <p>Confirm that the photo you upload is of excellent quality!</p>
+                              <p>Ensure that the photo you upload is of excellent quality!</p>
                             </div>`;
   progressArea.innerHTML = `<div class="row">
                               <i class="fas fa-file-alt"></i>

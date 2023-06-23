@@ -366,7 +366,7 @@
 .timeline .container .content p {
   color: var(--light3-gray);
   font-size: 0.85em;
-  line-height: 1.25;
+  line-height: 1.35;
 }
 
 @media (max-width: 768px) {
