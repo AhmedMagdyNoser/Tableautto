@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="shortcut icon" href="imgs/icon.ico" />
+    <title>Tableautto | Turn Your Memories into Art</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/master.css">
-  <link rel="shortcut icon" href="imgs/icon.ico">
-  <title>Tableautto | Turn Your Memories into Art</title>
-</head>
-
-<body>
-
-  <!-- ---------- Header ---------- -->
-  <header id="header">
-    <div class="container">
-      <a class="logo" href="index.html">Tableautto</a>
-      <nav>
-        <ul>
-          <li><a href="print.html">Print</a></li>
-          <li><a href="draw.html">Draw</a></li>
-          <li><a href="art.html">Art</a></li>
-          <li><a href="decoration.html">Decoration</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <a class="login" href="login.html">Login</a>
-      </nav>
-      <i id="toggle-menu" class="fa-solid fa-bars"></i>
-    </div>
-  </header>
-
-  <!-- ---------- Uploading ---------- -->
-  <section class="uploading">
-    <div class="container">
-      <div class="back-images">
-        <img src="imgs/backPencil.png" alt="Camera">
-        <img src="imgs/backFrame.png" alt="Frame">
-      </div>
-      <div class="uploading-info">
-        <h2 class="main-heading">Upload a photo you want to draw</h2>
-        <p class="main-heading">Rest Easy Knowing Your Files Are Secure and Private.</p>
-      </div>
-      <form action="#">
-        <i class="fa-solid fa-cloud-arrow-up"></i>
-        <p>browse file to upload</p>
-        <input type="file" hidden>
-      </form>
-      <div class="prompt extention-prompt">
-        <p>Please select <b>jpg</b> or <b>png</b> photo</p>
-      </div>
-      <div class="prompt replacement-prompt">
-        <p>Would you like to replace this photo?</p>
-        <div class="options">
-          <button class="yes-replace">Yes</button>
-          <button class="no-replace">No</button>
+  <body>
+    <div class="page">
+      <!-- ---------- Header ---------- -->
+      <header id="header">
+        <div class="container">
+          <a class="logo" href="index.html">Tableautto</a>
+          <nav>
+            <ul>
+              <li><a href="print.html">Print</a></li>
+              <li><a href="draw.html">Draw</a></li>
+              <li><a href="art.html">Art</a></li>
+              <li><a href="decoration.html">Decoration</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a class="login" href="login.html">Login</a>
+          </nav>
+          <i id="toggle-menu" class="fa-solid fa-bars"></i>
         </div>
-      </div>
-      <div class="quality-note">
-        <!--
+      </header>
+
+      <!-- ---------- Uploading ---------- -->
+      <section class="uploading">
+        <div class="container">
+          <div class="back-images">
+            <img src="imgs/backPencil.png" alt="Camera" />
+            <img src="imgs/backFrame.png" alt="Frame" />
+          </div>
+          <div class="uploading-info">
+            <h2 class="main-heading">Upload a photo you want to draw</h2>
+            <p class="main-heading">Rest Easy Knowing Your Files Are Secure and Private.</p>
+          </div>
+          <form action="#">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p>browse file to upload</p>
+            <input type="file" hidden />
+          </form>
+          <div class="prompt extention-prompt">
+            <p>Please select <b>jpg</b> or <b>png</b> photo</p>
+          </div>
+          <div class="prompt replacement-prompt">
+            <p>Would you like to replace this photo?</p>
+            <div class="options">
+              <button class="yes-replace">Yes</button>
+              <button class="no-replace">No</button>
+            </div>
+          </div>
+          <div class="quality-note">
+            <!--
           <div class="row">
             <i class="fa-solid fa-circle-exclamation"></i>
             <p>Ensure that the photo you upload is of excellent quality!</p>
           </div> 
         -->
-      </div>
-      <div class="progress-area">
-        <!--
+          </div>
+          <div class="progress-area">
+            <!--
           <div class="row">
             <i class="fas fa-file-alt"></i>
             <div class="content">
@@ -78,9 +77,9 @@
             </div>
           </div>
         -->
-      </div>
-      <div class="uploaded-area">
-        <!--
+          </div>
+          <div class="uploaded-area">
+            <!--
           <div class="row">
             <i class="fas fa-file-alt"></i>
             <div class="content">
@@ -90,108 +89,105 @@
             <i class="fas fa-check uploaded-check"></i>
           </div>
         -->
-      </div>
-      <div class="continue-button">
-        <a href="#size-selection">Continue</a>
-      </div>
+          </div>
+          <div class="continue-button">
+            <a href="#size-selection">Continue</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- Example Photo ---------- -->
+      <section class="example-photo">
+        <div class="image draw"></div>
+        <div class="overlay"></div>
+      </section>
+
+      <!-- ---------- Size Selection ---------- -->
+      <section id="size-selection" class="size-selection">
+        <div class="container">
+          <h2 class="main-heading">select the size of your tableau</h2>
+          <p class="main-heading">Ensure that the size is appropriate and matches the dimensions of the chosen photo.</p>
+          <div class="sizes">
+            <div class="box">
+              <div class="tableau s50x70">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <b class="price">30$</b>
+              </div>
+              <span>50 X 70 CM</span>
+            </div>
+            <div class="box">
+              <div class="tableau s40x50">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <b class="price">25$</b>
+              </div>
+              <span>40 X 50 CM</span>
+            </div>
+            <div class="box">
+              <div class="tableau s30x40">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <b class="price">20$</b>
+              </div>
+              <span>30 X 40 CM</span>
+            </div>
+            <div class="box">
+              <div class="tableau s20x30">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <b class="price">15$</b>
+              </div>
+              <span>20 X 30 CM</span>
+            </div>
+            <div class="box">
+              <div class="tableau s25x25">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <b class="price">15$</b>
+              </div>
+              <span>25 X 25 CM</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- Order Now ---------- -->
+      <section class="order-now">
+        <div class="container">
+          <p id="order-details">you have not selected a photo or a size for your tableau.</p>
+          <button id="order-now-button" disabled>Order Now</button>
+        </div>
+      </section>
+
+      <!-- ---------- Our Artists ---------- -->
+      <!-- ---------- Our Artists ---------- -->
+      <!-- ---------- Our Artists ---------- -->
+
+      <!-- ---------- Footer ---------- -->
+      <footer>
+        <div class="container">
+          <div class="box basic">
+            <a class="logo" href="index.html">Tableautto</a>
+            <p>
+              We are committed to providing you with an exceptional selection of handcrafted tableaux and wall decor to elevate your living
+              space. Our goal is to ignite your imagination and help you create a home that reflects your distinct personality and style.
+            </p>
+            <div class="links">
+              <a href="print.html">Print</a> • <a href="draw.html">Draw</a> • <a href="art.html">Art</a> •
+              <a href="decoration.html">Decoration</a> •
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div class="box contact">
+            <div class="address">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>Tableautto, 25 Art Avenue, Cairo, Egypt</p>
+            </div>
+            <div class="phone">
+              <i class="fa-solid fa-phone"></i>
+              <p>+20 123 456 789</p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
-  </section>
-
-  <!-- ---------- Example Photo ---------- -->
-  <section class="example-photo">
-    <div class="image draw"></div>
-    <div class="overlay"></div>
-  </section>
-
-  <!-- ---------- Size Selection ---------- -->
-  <section id="size-selection" class="size-selection">
-    <div class="container">
-      <h2 class="main-heading">select the size of your tableau</h2>
-      <p class="main-heading">Ensure that the size is appropriate and matches the dimensions of the chosen photo.</p>
-      <div class="sizes">
-        <div class="box">
-          <div class="tableau s50x70">
-            <i class="fa-solid fa-mountain-sun"></i>
-            <b class="price">30$</b>
-          </div>
-          <span>50 X 70 CM</span>
-        </div>
-        <div class="box">
-          <div class="tableau s40x50">
-            <i class="fa-solid fa-mountain-sun"></i>
-            <b class="price">25$</b>
-          </div>
-          <span>40 X 50 CM</span>
-        </div>
-        <div class="box">
-          <div class="tableau s30x40">
-            <i class="fa-solid fa-mountain-sun"></i>
-            <b class="price">20$</b>
-          </div>
-          <span>30 X 40 CM</span>
-        </div>
-        <div class="box">
-          <div class="tableau s20x30">
-            <i class="fa-solid fa-mountain-sun"></i>
-            <b class="price">15$</b>
-          </div>
-          <span>20 X 30 CM</span>
-        </div>
-        <div class="box">
-          <div class="tableau s25x25">
-            <i class="fa-solid fa-mountain-sun"></i>
-            <b class="price">15$</b>
-          </div>
-          <span>25 X 25 CM</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ---------- Order Now ---------- -->
-  <section class="order-now">
-    <div class="container">
-      <p id="order-details">you have not selected a photo or a size for your tableau.</p>
-      <button id="order-now-button" disabled>Order Now</button>
-    </div>
-  </section>
-
-  <!-- ---------- Our Artists ---------- -->
-  <!-- ---------- Our Artists ---------- -->
-  <!-- ---------- Our Artists ---------- -->
-
-  <!-- ---------- Footer ---------- -->
-  <footer>
-    <div class="container">
-      <div class="box basic">
-        <a class="logo" href="index.html">Tableautto</a>
-        <p>We are committed to providing you with an exceptional selection of handcrafted tableaux and wall decor to
-          elevate your living space. Our goal is to ignite your imagination and help you create a home that reflects
-          your distinct personality and style.</p>
-        <div class="links">
-          <a href="print.html">Print</a> •
-          <a href="draw.html">Draw</a> •
-          <a href="art.html">Art</a> •
-          <a href="decoration.html">Decoration</a> •
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
-      <div class="box contact">
-        <div class="address">
-          <i class="fa-solid fa-location-dot"></i>
-          <p>Tableautto, 25 Art Avenue, Cairo, Egypt</p>
-        </div>
-        <div class="phone">
-          <i class="fa-solid fa-phone"></i>
-          <p>+20 123 456 789</p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/uploading.js"></script>
-  <script src="js/global.js"></script>
-
-</body>
-
+    <script src="js/uploading.js"></script>
+    <script src="js/global.js"></script>
+  </body>
 </html>
