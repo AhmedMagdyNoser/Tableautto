@@ -1,3 +1,5 @@
+@import url(../fontface/fontface.css);
+
 /* =========================== Global Rules =========================== */
 :root {
   --main-color: #964b20;
@@ -111,8 +113,8 @@ p.main-heading {
   height: 50px;
   border-radius: 50%;
   border: 8px solid;
-  border-color: #e1e1e1;
-  border-right-color: #964b20;
+  border-color: var(--light2-gray);
+  border-right-color: var(--main-color);
   animation: rotate 1s infinite linear;
 }
 
