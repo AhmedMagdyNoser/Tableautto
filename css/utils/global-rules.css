@@ -101,11 +101,15 @@ p.main-heading {
 /* =========================== Loading =========================== */
 
 .loading {
+  background-color: var(--light1-gray);
+  position: fixed;
+  z-index: 10;
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: opacity 0.1s;
 }
 
 .custom-loader {
@@ -122,8 +126,4 @@ p.main-heading {
   to {
     transform: rotate(1turn);
   }
-}
-
-.page {
-  display: none;
 }

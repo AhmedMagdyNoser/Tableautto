@@ -1,16 +1,9 @@
 // Loading Animation
-let loadingElement = `<div class="loading">
-                        <div class="custom-loader"></div>
-                      </div>`;
-
-document.body.innerHTML += loadingElement;
-
 let loading = document.querySelector(".loading");
-let page = document.querySelector(".page");
 
 window.addEventListener("load", () => {
-  loading.style.display = "none";
-  page.style.display = "block";
+  loading.style.opacity = "0";
+  loading.style.pointerEvents = "none";
 });
 
 // Prevent the context menu
