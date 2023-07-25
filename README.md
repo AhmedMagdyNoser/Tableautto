@@ -4,7 +4,7 @@ Tableautto is a website that offers a range of personalized and handcrafted art 
 
 ## Getting Started
 
-To get started with Tableautto, simply visit our website at www.tableautto.com. From there, you can browse our selection of products.
+To get started with Tableautto, simply visit our website at https://ahmedmagdynoser.github.io/Tableautto. From there, you can browse our selection of products.
 
 ## Features
 
