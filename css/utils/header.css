@@ -41,6 +41,10 @@ header .container nav ul li a {
   border-radius: 5px;
 }
 
+header .container nav ul li a.active-page {
+  background-color: var(--light2-gray);
+}
+
 header .container nav ul li a:hover {
   background-color: var(--light2-gray);
 }
