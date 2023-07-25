@@ -3,9 +3,9 @@ let landing = document.querySelector(".home-landing");
 let landingImageNum = 2;
 
 setInterval(() => {
-    landing.style.backgroundImage = `url(imgs/landing${landingImageNum}.jpg)`;
-    landing.style.backgroundSize = "cover";
-    (landingImageNum < 3) ? landingImageNum++ : landingImageNum = 1;
+  landing.style.backgroundImage = `url(imgs/landing${landingImageNum}.jpg)`;
+  landing.style.backgroundSize = "cover";
+  landingImageNum < 3 ? landingImageNum++ : (landingImageNum = 1);
 }, 5000);
 
 // ------------------------------------------------------------
@@ -16,36 +16,37 @@ let salesValuesProgress = document.querySelectorAll(".best-selling .container .t
 let salesValuesLabels = document.querySelectorAll(".best-selling .container .text-box .service  .service-name span");
 let isBestSellingReached = false;
 window.addEventListener("scroll", () => {
-    if (!isBestSellingReached) {
-        if (window.pageYOffset + window.innerHeight * (2 / 3) > bestSellingSection.offsetTop) { // when scrolling into the section
-            for (let i = 0; i < salesValuesLabels.length; i++) {
-                salesValuesProgress[i].style.width = `${salesValuesProgress[i].dataset.progress}%`;
-                salesValuesLabelsAnimation(salesValuesLabels[i], salesValuesProgress[i].dataset.progress * 75, 150);
-                document.querySelector(".best-selling .container .img-box img").style.opacity = "1"; //transition of the image
-                document.querySelector(".best-selling .container .img-box img").style.transform = "translateY(0px)"; //transition of the image
-            }
-            isBestSellingReached = true; // to stop checking for it again
-        }
+  if (!isBestSellingReached) {
+    if (window.pageYOffset + window.innerHeight * (2 / 3) > bestSellingSection.offsetTop) {
+      // when scrolling into the section
+      for (let i = 0; i < salesValuesLabels.length; i++) {
+        salesValuesProgress[i].style.width = `${salesValuesProgress[i].dataset.progress}%`;
+        salesValuesLabelsAnimation(salesValuesLabels[i], salesValuesProgress[i].dataset.progress * 75, 150);
+        document.querySelector(".best-selling .container .img-box img").style.opacity = "1"; //transition of the image
+        document.querySelector(".best-selling .container .img-box img").style.transform = "translateY(0px)"; //transition of the image
+      }
+      isBestSellingReached = true; // to stop checking for it again
     }
+  }
 });
-    
+
 function salesValuesLabelsAnimation(changingItem, target, speed) {
-        const updateCount = () => {
-            const count = parseInt(changingItem.innerText);
-            const increment = Math.trunc(target / speed);
-            if (count < target) {
-                changingItem.innerText = (count + increment) + "$";
-                setTimeout(updateCount, 1);
-            } else {
-                changingItem.innerText = target + "$";
-            }
-        };
-        updateCount();
+  const updateCount = () => {
+    const count = parseInt(changingItem.innerText);
+    const increment = Math.trunc(target / speed);
+    if (count < target) {
+      changingItem.innerText = count + increment + "$";
+      setTimeout(updateCount, 1);
+    } else {
+      changingItem.innerText = target + "$";
+    }
+  };
+  updateCount();
 }
 
 // ------------------------------------------------------------
 
-// (element).offsetTop ... The position of that element in the page (in pixels from top).
+// (element).offsetTop ... The position of that element relative to the offsetParent (in pixels from top).
 // (element).offsetHeight ... The Height of that element (in pixels).
 // window.pageYoffset ... The position of the scrolling in the page (in pixels from top).
 // window.innerHeight ... The height of the window (in pixels).
@@ -53,19 +54,46 @@ function salesValuesLabelsAnimation(changingItem, target, speed) {
 // You can also use this condition instead : if (window.pageYOffset > (bestSellingSection.offsetTop +  bestSellingSection.offsetHeight - window.innerHeight) && !reached )
 // Da lw 3ayez el section kolh ykon zahr ... laken el fo2 just awel el section ywsal telt el 4a4h men t7t.
 
-// Dy Gamila brdo:
+// Scrolling Into View:
 // document.querySelector(".size-selection").scrollIntoView();
 
 // ------------------------------------------------------------
 
+// Product Sections
+let cards = document.querySelectorAll(".products .container .card");
+
+// change background (overlay div) for each card
+cards.forEach((element) => {
+  element.firstElementChild.style.backgroundImage = `url(${element.firstElementChild.nextElementSibling.getAttribute("src")})`;
+});
+
+// show cards on scroll
+showObjectsIfOnScreen(cards);
+window.addEventListener("scroll", () => {
+  showObjectsIfOnScreen(cards);
+});
+function showObjectsIfOnScreen(objects) {
+  // objects is an array of HTML elements
+  objects.forEach((element) => {
+    if (window.pageYOffset + window.innerHeight > element.offsetTop) {
+      // when scrolling into an element
+      element.style.opacity = "1";
+    }
+  });
+}
+
+// ------------------------------------------------------------
+
+// Create an Animation on the Timeline Section
 let timelineSection = document.querySelector(".timeline");
 let timelineContent = document.querySelectorAll(".timeline .content");
 
 window.addEventListener("scroll", () => {
-    if (window.pageYOffset + window.innerHeight * (2 / 3) > timelineSection.offsetTop) { // when scrolling into the section
-        timelineContent.forEach(element => {
-            element.style.transform = "translateY(0)";
-            element.style.opacity = "1";
-        });
-    }
+  if (window.pageYOffset + window.innerHeight * (2 / 3) > timelineSection.offsetTop) {
+    // when scrolling into the section
+    timelineContent.forEach((element) => {
+      element.style.transform = "translateY(0)";
+      element.style.opacity = "1";
+    });
+  }
 });

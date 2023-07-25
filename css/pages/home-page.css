@@ -76,13 +76,69 @@
   }
 
   .home-landing .container a {
-     margin-top: 5px;
+    margin-top: 5px;
   }
 }
 
 /* =========================== Uploading =========================== */
-/* =========================== Uploading =========================== */
-/* =========================== Uploading =========================== */
+.uploading-services {
+  padding: 50px 0;
+  background-color: var(--light1-gray);
+}
+
+.uploading-services .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 768px) {
+  .uploading-services .container {
+    flex-direction: column;
+  }
+}
+
+.uploading-services .container .divider {
+  width: 1px;
+  background-color: var(--light2-gray);
+}
+
+.uploading-services .container .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.uploading-services .container .service a {
+  padding: 35px;
+  width: 300px;
+  max-width: 300px;
+  margin-bottom: 15px;
+  border: 2px dashed var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.uploading-services .container .service a:hover {
+  opacity: 0.85;
+  cursor: pointer;
+}
+
+.uploading-services .container .service a :where(i, p) {
+  color: var(--main-color);
+}
+
+.uploading-services .container .service a i {
+  font-size: 2.5em;
+}
+
+.uploading-services .container .service a p {
+  text-transform: capitalize;
+}
 
 /* =========================== Support Info =========================== */
 .support-info {
@@ -118,13 +174,63 @@
   font-size: 0.9em;
 }
 
-/* =========================== Art =========================== */
-/* =========================== Art =========================== */
-/* =========================== Art =========================== */
+/* =========================== Art & Decoration Products =========================== */
+.home-products {
+  background-color: var(--light1-gray);
+  padding: 25px 0;
+}
 
-/* =========================== Decoration =========================== */
-/* =========================== Decoration =========================== */
-/* =========================== Decoration =========================== */
+.home-products .container.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.home-products .heading h2 {
+  text-align: start;
+  font-size: 1.8em;
+  line-height: 1.25;
+  color: var(--dark-gray);
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.home-products .heading a {
+  background-color: var(--main-color);
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  padding: 7px 10px;
+  border-radius: 5px;
+  width: fit-content;
+}
+
+.home-products .heading a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 576px) {
+  .home-products .heading h2 {
+    font-size: 1.15em;
+  }
+  .home-products .heading a {
+    font-size: 0.75em;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-products .container.heading {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .home-products .heading h2 {
+    text-align: center;
+  }
+}
 
 /* =========================== About Us =========================== */
 .about-us {
@@ -281,7 +387,7 @@
 }
 
 .timeline .container .center-line::after {
-  content: '';
+  content: "";
   background-color: var(--main-color);
   border-radius: 50%;
   width: 10px;
@@ -323,7 +429,7 @@
 /* after => circle ... before => arrow */
 .timeline .container .content.right::after,
 .timeline .container .content.left::after {
-  content: '';
+  content: "";
   background-color: var(--light1-gray);
   border: 3px solid var(--main-color);
   border-radius: 50%;
@@ -341,7 +447,7 @@
 
 .timeline .container .content.right::before,
 .timeline .container .content.left::before {
-  content: '';
+  content: "";
   border-width: 12px;
   border-style: solid;
   border-color: transparent white transparent transparent;
@@ -378,7 +484,6 @@
 }
 
 @media (max-width: 480px) {
-
   /* to make them all in the right side */
   .timeline .container .content.left::after {
     left: -31px;
