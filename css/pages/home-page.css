@@ -131,7 +131,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 3px 3px 3px 1px rgb(0, 0, 0, 10%);
+  box-shadow: 2px 2px 3px 1px rgb(0, 0, 0, 10%);
   margin-bottom: 20px;
 }
 
@@ -184,17 +184,17 @@
 }
 
 /* =========================== Art & Decoration Products =========================== */
-.home-products {
+.home-products.products {
   background-color: var(--light1-gray);
-  padding: 25px 0;
+  padding: 50px 0;
 }
 
 .home-products .container.heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  margin-bottom: 15px;
+  padding: 0 15px ;
+  margin-bottom: 25px;
 }
 
 .home-products .heading h2 {
@@ -223,28 +223,80 @@
 }
 
 @media (max-width: 576px) {
-  .home-products .heading h2 {
-    font-size: 1.15em;
-  }
-  .home-products .heading a {
-    font-size: 0.75em;
-  }
-}
-
-@media (max-width: 480px) {
   .home-products .container.heading {
     flex-direction: column;
-    gap: 5px;
   }
   .home-products .heading h2 {
     text-align: center;
+    font-size: 1.2em;
+  }
+  .home-products .heading a {
+    display: none;
   }
 }
+
+
+/* =========================== Artists =========================== */
+.artists {
+  padding: 50px 0;
+}
+
+.artists .container h2 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 2em;
+  text-align: center;
+}
+
+.artists .container .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.artists .container .content .box {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  background-color: #f8f8fa;
+  box-shadow: 2px 2px 3px 1px #0002;
+  padding: 65px 20px 20px 20px;
+  position: relative;
+  margin-top: 65px;
+  max-width: 100%;
+}
+
+.artists .container .content .box img {
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid white;
+}
+
+.artists .container .content .box h4 {
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.artists .container .content .box p {
+  width: 350px;
+  max-width: 100%;
+  color: var(--light3-gray);
+  line-height: 1.2;
+}
+
 
 /* =========================== About Us =========================== */
 .about-us {
   padding: 50px 0;
-  background-color: var(--light1-gray);
 }
 
 .about-us .container {
@@ -281,99 +333,6 @@
     padding: 0 10px;
     font-size: smaller;
     text-align: center;
-  }
-}
-
-/* =========================== Best-Selling =========================== */
-.best-selling {
-  padding: 50px 0;
-}
-
-.best-selling .container {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-}
-
-.best-selling .container .text-box {
-  min-width: 60%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-}
-
-.best-selling .container .text-box h2 {
-  color: var(--main-color);
-  text-transform: capitalize;
-  font-size: 2em;
-}
-
-@media (max-width: 768px) {
-  .best-selling .container .text-box {
-    font-size: smaller;
-  }
-
-  .best-selling .container .text-box h2 {
-    text-align: center;
-  }
-}
-
-.best-selling .container .text-box .service {
-  margin-top: 20px;
-}
-
-.best-selling .container .text-box .service .service-name {
-  font-weight: bold;
-  color: var(--dark-gray);
-  margin-bottom: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.best-selling .container .text-box .service .service-name span {
-  color: var(--main-color);
-  border: 1px solid var(--main-color);
-  border-radius: 5px;
-  padding: 3px 5px;
-  font-size: smaller;
-}
-
-.best-selling .container .text-box .service .progress-bar {
-  background-color: var(--light1-gray);
-  height: 15px;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.best-selling .container .text-box .service .progress-bar .progress-value {
-  width: 0%;
-  /* Edited in JS */
-  height: 100%;
-  background-color: var(--main-color);
-  transition: 1s;
-}
-
-.best-selling .container .img-box img {
-  padding: 25px;
-  width: 100%;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: 1.5s;
-}
-
-@media (max-width: 768px) {
-  .best-selling .container .text-box {
-    width: 100%;
-  }
-
-  .best-selling .container .img-box {
-    display: none;
-  }
-
-  .best-selling .container .img-box img {
-    display: none;
   }
 }
 
@@ -519,5 +478,98 @@
     width: calc(100% - 30px);
     right: unset;
     left: 27px;
+  }
+}
+
+/* =========================== Best-Selling =========================== */
+.best-selling {
+  padding: 50px 0;
+}
+
+.best-selling .container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.best-selling .container .text-box {
+  min-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.best-selling .container .text-box h2 {
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+@media (max-width: 768px) {
+  .best-selling .container .text-box {
+    font-size: smaller;
+  }
+
+  .best-selling .container .text-box h2 {
+    text-align: center;
+  }
+}
+
+.best-selling .container .text-box .service {
+  margin-top: 20px;
+}
+
+.best-selling .container .text-box .service .service-name {
+  font-weight: bold;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.best-selling .container .text-box .service .service-name span {
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+  padding: 3px 5px;
+  font-size: smaller;
+}
+
+.best-selling .container .text-box .service .progress-bar {
+  background-color: var(--light1-gray);
+  height: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.best-selling .container .text-box .service .progress-bar .progress-value {
+  width: 0%;
+  /* Edited in JS */
+  height: 100%;
+  background-color: var(--main-color);
+  transition: 1s;
+}
+
+.best-selling .container .img-box img {
+  padding: 25px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 1.5s;
+}
+
+@media (max-width: 768px) {
+  .best-selling .container .text-box {
+    width: 100%;
+  }
+
+  .best-selling .container .img-box {
+    display: none;
+  }
+
+  .best-selling .container .img-box img {
+    display: none;
   }
 }
